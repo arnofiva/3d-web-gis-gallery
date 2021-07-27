@@ -2,8 +2,7 @@
         packages: [
           {
             name: "app",
-            // location: document.location.pathname.replace(/\/[^/]+$/, ""),
-            location: "/",
+            location: document.location.pathname.replace(/\/[^/]*$/, '/'),
             main: "embedded/main.c8e4ae3fcc6a4da690f0"
           }
         ]

@@ -2,8 +2,7 @@
         packages: [
           {
             name: "app",
-            // location: document.location.pathname.replace(/\/[^/]+$/, ""),
-            location: "/",
+            location: document.location.pathname.replace(/\/[^/]*$/, '/'),
             main: "index/main.ec119611a787bfa3aee4"
           }
         ]
