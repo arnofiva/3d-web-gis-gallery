@@ -10,8 +10,7 @@
         packages: [
           {
             name: "app",
-            // location: document.location.pathname.replace(/\/[^/]+$/, ""),
-            location: "/",
+            location: document.location.pathname.replace(/\/[^/]*$/, '/'),
             main: "<%= htmlWebpackPlugin.files.js[0].replace(/\.[^/.]+$/, '') %>"
           }
         ]
