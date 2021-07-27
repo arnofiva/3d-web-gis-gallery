@@ -1,0 +1,112 @@
+
+<!-- <!DOCTYPE html> -->
+
+<!-- <%= JSON.stringify(htmlWebpackPlugin, null, 2) %> -->
+
+<html>
+  <head>
+    <script>
+      window.dojoConfig = {
+        packages: [
+          {
+            name: "app",
+            // location: document.location.pathname.replace(/\/[^/]+$/, ""),
+            location: "/",
+            main: "<%= htmlWebpackPlugin.files.js[0].replace(/\.[^/.]+$/, '') %>"
+          }
+        ]
+      };
+    </script>
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.20/esri/css/main.css">
+
+
+
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+    <% } %>
+
+    <meta charset="utf-8" />
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>" />
+
+    <meta name="twitter:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta name="twitter:description" content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://" />
+
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="og:description"  content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta property="og:image" content="https://" />
+    <meta property="og:url" content="https://" />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" media="(prefers-color-scheme:dark)" type="image/png" sizes="32x32" href="https://www.esri.com/content/dam/esrisites/en-us/common/favicon/esri-favicon-dark-32.png">
+    <link rel="icon" media="(prefers-color-scheme:light)" type="image/png" sizes="32x32" href="https://www.esri.com/content/dam/esrisites/en-us/common/favicon/esri-favicon-light-32.png">
+  </head>
+  <body>
+
+     <!-- Sample HTML -->
+ <header class="sub-nav arcgis-product-header">
+  <div class="grid-container padding-leader-1">
+    <!-- <div class="column-24">
+      <nav class="breadcrumbs link-off-black">
+        <a href="#" class="crumb">Products</a>
+        <a href="#" class="crumb is-active">3D Web GIS</a>
+      </nav>
+    </div> -->
+
+    <div class="column-12">
+      <h1 class="font-size-8 padding-leader-3 text-white">3D Web GIS</h1>
+      <!-- <p class="text-white font-size-1">It's a pretty great product.</p> -->
+    </div>
+    <!-- <div class="column-12">
+      <a href="#" class="btn leader-4 right">Sign up for a Free Trial</a>
+    </div> -->
+
+    <nav class="sub-nav-list phone-hide padding-leader-4 column-24">
+      <a class="sub-nav-link <%= htmlWebpackPlugin.options.entry === 'index' ? 'is-active' : '' %>" href="./index.html">Custom</a>
+      <a class="sub-nav-link <%= htmlWebpackPlugin.options.entry === 'embedded' ? 'is-active' : '' %>" href="./embedded.html">Embedded</a>
+      <a class="sub-nav-link" target="_blank" href="https://zurich.maps.arcgis.com/apps/instant/filtergallery/index.html?group=eb3d53d465364b76b62f0f77cfbc437a">Category Gallery</a>
+      <a class="sub-nav-link" target="_blank" href="https://zurich.maps.arcgis.com/apps/MinimalGallery/index.html?group=eb3d53d465364b76b62f0f77cfbc437a">Minimal Gallery</a>
+      <!-- <a class="sub-nav-link" href="#">Showcase</a>
+      <a class="sub-nav-link" href="#">What's New</a>
+      <a class="sub-nav-link" href="#">Credits</a>
+      <a class="sub-nav-link" href="#">Pricing</a>
+      <a class="sub-nav-link" href="#">Free Trial</a> -->
+    </nav>
+  </div>
+</header>
+
+<header class="third-nav scroll-show js-sticky" style="top: 0px;">
+  <div class="third-nav-container">
+    <div class="grid-container">
+      <nav class="column-24" role="navigation" aria-labelledby="thirdnav breadcrumbs">
+        <a href="#" class="third-nav-link crumb">3D Web GIS</a>
+        <a href="#" class="third-nav-link crumb">Gallery</a>
+        <a class="icon-ui-up third-nav-link right" href="#">Back to Top</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<div class="wrapper">
+
+  <!-- main-content -->
+  <div class="grid-container">
+
+    <!-- side navigation -->
+    <!-- <div class="column-4">
+      <aside class="side-nav">
+        <h2 id="sidenav" class="side-nav-title">Sidenav Group</h2>
+        <nav role="navigation" aria-labelledby="sidenav">
+          <a href="#" class="side-nav-link">Side Nav Link 1</a>
+          <a href="#" class="side-nav-link">Side Nav Link 2</a>
+          <a href="#" class="side-nav-link">Side Nav Link 3</a>
+          <a href="#" class="side-nav-link">Side Nav Link 4</a>
+        </nav>
+      </aside>
+    </div> -->
+    <h1 class="padding-leader-1 padding-trailer-1">Web Scenes and 3D Web Apps</h1>
